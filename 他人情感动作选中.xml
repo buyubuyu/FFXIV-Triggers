@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="575cabbd-a59e-4900-b99b-c3de426b0630" Name="不安desu" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Name="情感动作" Id="fe44b7b6-b9be-446f-833d-cf41e1f97c61" RegularExpression="^.{14} 00:001d:(?&lt;player&gt;.*?):.*?赛赛卢恩.*?$">
+        <Actions>
+          <Action OrderNumber="1" LogMessageText="${_event}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" UseTTSTextExpression="${player}找你" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" MessageBoxText="${player}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="MessageBox">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+        </Condition>
+      </Trigger>
+      <Trigger Enabled="true" Name="情感动作" Id="9af394fc-dd73-4a2f-8243-8cc5fe82345c" RegularExpression="^.{14} 00:001c:(?&lt;player&gt;.*?):.*?赛赛卢恩.*?$">
+        <Actions>
+          <Action OrderNumber="1" LogMessageText="${_event}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="LogMessage">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+          <Action OrderNumber="2" UseTTSTextExpression="${player}找你" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="UseTTS">
+            <Condition Enabled="true" Grouping="Or">
+              <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+            </Condition>
+          </Action>
+          <Action OrderNumber="3" MessageBoxText="${player}" TextAuraFontSize="9" TextAuraFontName="宋体" Enabled="False" ActionType="MessageBox">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${player}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringNotEqualCase" />
+        </Condition>
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
