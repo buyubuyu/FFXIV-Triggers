@@ -1,4 +1,4 @@
-# some-Triggers
+# some-triggers
 个人写的最终幻想14用的小玩意儿 所有的功能开发全靠惰性驱动 如果有一些地方没做适配 那就是懒...
 直接导入triggernomentry使用
 
