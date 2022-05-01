@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<TriggernometryExport Version="1">
+  <ExportedFolder Id="33cda436-2834-44c3-9151-e1ec8d9210e0" Name="简单提示" Enabled="true">
+    <Folders />
+    <Triggers>
+      <Trigger Enabled="true" Name="拉人提示" Id="7ea9cbac-6189-48d4-b5d6-96074ffd76db" RegularExpression="(?&lt;me&gt;.*?):AD:(复生|复苏|复活|生辰|赤复活):.{8}:(?&lt;player&gt;.*?):.{7}" Description="自行修改中间技能对应的情况 用|分隔">
+        <Actions>
+          <Action OrderNumber="1" NamedCallbackName="command" NamedCallbackParam="/e 复活${player},自行选择复活时机,起来后不要急着解除无敌状态&lt;se.6&gt;" TextAuraFontSize="9" TextAuraFontName="宋体" ActionType="NamedCallback">
+            <Condition Enabled="false" Grouping="Or" />
+          </Action>
+        </Actions>
+        <Condition Enabled="true" Grouping="Or">
+          <ConditionSingle Enabled="true" ExpressionL="${me}" ExpressionTypeL="String" ExpressionR="${_ffxivplayer}" ExpressionTypeR="String" ConditionType="StringEqualCase" />
+        </Condition>
+        <Conditions />
+      </Trigger>
+    </Triggers>
+  </ExportedFolder>
+</TriggernometryExport>
